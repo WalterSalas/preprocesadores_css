@@ -1,6 +1,12 @@
 -var titulo = "Sub-Titulo principal"
 -var titulos = ["Titulo principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
--var usuario = "Walter"
+mixin caja(imagen, titulo, contenido)
+	.caja
+		.caja__imagen: img(src="images/"+imagen)
+		.caja__contenido
+			h3=titulo
+			p=contenido 
+
 doctype html
 html
 	head
@@ -25,6 +31,7 @@ html
 					| Este e un parrafo de varias lineas
 					span Este es un texto negrito!
 				a.boton Leer Más
-		ul
-			each title in titulos
-				li=title
+		main.contenido
+			+caja ('imagen.png', titulos[1], "Este e un parrafo que se pasa al mixin" )
+			+caja ('imagen.png', titulos[2], "Este e un parrafo que se pasa al mixin" )
+			+caja ('imagen.png', titulos[3], "Este e un parrafo que se pasa al mixin" )
