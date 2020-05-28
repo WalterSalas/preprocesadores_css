@@ -1,0 +1,23 @@
+extend componentes/plantilla.pug
+
+block contenidos
+        section.reto
+            .reto__menu
+                h2=menu
+                ul
+                    each enlace in enlaces
+                        li=enlace
+            .reto__contenido
+                h2 #{titulos[0]}
+                p
+                    | Este e un parrafo de varias lineas
+                    | Este e un parrafo de varias lineas
+                    | Este e un parrafo de varias lineas
+                    | Este e un parrafo de varias lineas
+                    | Este e un parrafo de varias lineas
+                    | Este e un parrafo de varias lineas
+                    | Este e un parrafo de varias lineas
+                    | Este e un parrafo de varias lineas
+                    | Este e un parrafo de varias lineas
+                    | Este e un parrafo de varias lineas
+                a.boton Ver mas
