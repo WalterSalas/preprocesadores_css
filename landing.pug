@@ -1,5 +1,6 @@
--var titulo = "Titulo principal"
+-var titulo = "Sub-Titulo principal"
 -var titulos = ["Titulo principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
+-var usuario = "Walter"
 doctype html
 html
 	head
@@ -8,11 +9,14 @@ html
 	body
 		header
 			h1 PlatziGames
-			a.boton Registro
+			if usuario
+				a Hola #{usuario}
+			else
+				a.boton Registro
 		section.intro
 			.intro__imagen: img(src="images/imagen.png")
 			.intro__contenido
-				h2 #{titulos[0] 
+				h2 #{titulos[0]}
 				p 
 					| Este e un parrafo de varias lineas
 					| Este e un parrafo de varias lineas
@@ -20,4 +24,7 @@ html
 					| Este e un parrafo de varias lineas
 					| Este e un parrafo de varias lineas
 					span Este es un texto negrito!
-				a.boton Leer mas
+				a.boton Leer Más
+		ul
+			each title in titulos
+				li=title
